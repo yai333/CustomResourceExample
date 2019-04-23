@@ -1,0 +1,32 @@
+service:
+  name: customResourceSample
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'ap-southeast-2'}
+  timeout: 30
+  environment:
+    POSTS_TABLE_NAME: ${self:custom.postsTable}
+
+custom:
+  poolName: samplePool
+  postsTable: ${self:provider.stage}posts
+  systemUserEmail: aiyi.hack@gmail.com
+  siteTable: ${self:provider.stage}site
+  tableThroughput: 5
+
+functions:
+  AddDefaultPost:
+    handler: handler.AddDefaultPost
+  SetDefaultSiteConfig:
+    handler: handler.SetDefaultSiteConfig
+
+resources:
+  # dynamodb
+  - ${file(resources/cognito.yml)}
+  # dynamodb
+  - ${file(resources/dynamodb.yml)}
+  # custom Resources
+  - ${file(resources/customResource.yml)}
