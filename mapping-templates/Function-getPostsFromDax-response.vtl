@@ -1,5 +1,0 @@
-#if($ctx.error)
-  $utils.toJson({"errorMessage":"lambda function exec failed."})
-#else
-	$utils.toJson($context.result.Items)
-#end

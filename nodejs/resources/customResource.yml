@@ -1,0 +1,14 @@
+Transform: "AWS::Serverless-2016-10-31"
+Resources:
+  DefaultPost:
+    Type: Custom::DefaultPost
+    Properties:
+      ServiceToken:
+        Fn::GetAtt:
+          - AddDefaultPostLambdaFunction
+          - Arn
+      StackLastUpdatedTime:
+        Fn::Transform:
+          Name: StackLastUpdatedTime
+          Parameters:
+            stackName: ${self:service.name}-${self:provider.stage}

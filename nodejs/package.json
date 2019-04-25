@@ -4,8 +4,9 @@
   "description": "",
   "main": "handler.js",
   "dependencies": {
-    "cfn-response": "^1.0.1",
-    "serverless-pseudo-parameters": "^2.4.0"
+    "axios": "^0.18.0",
+    "serverless-pseudo-parameters": "^2.4.0",
+    "uuidv4": "^4.0.0"
   },
   "devDependencies": {},
   "scripts": {

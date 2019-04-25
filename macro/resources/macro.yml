@@ -1,0 +1,9 @@
+Resources:
+  Macro:
+    Type: AWS::CloudFormation::Macro
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+          - GetStackLastUpdatedTimeLambdaFunction
+          - Arn
+      Name: StackLastUpdatedTime
