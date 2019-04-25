@@ -13,7 +13,7 @@ https://medium.com/@yia333/using-aws-cloudformation-macros-and-custom-resources-
 $ npm install -g serverless
 ```
 
-### Deploy Lambda macro
+### Deploy CloudFormation macro
 
 ```
 $ cd macro
@@ -21,12 +21,12 @@ $ npm install
 $ sls deploy
 ```
 
-### Deploy Lambda function
+### Deploy CloudFormation custom resource
 
-```buildoutcfg
+```
  $ cd nodejs
  $ npm install
  $ sls deploy
 ```
 
-Default post will be added to dynamodb Posts table immediately after deployment
+Default post will be added to empty DynamoDb Posts table immediately after deployment
