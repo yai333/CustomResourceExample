@@ -1,6 +1,6 @@
-# Custom resource
-
 This is an example of using AWS Lambda-backed custom resource to Invoke Lambda functions when you create, update, or delete a stack
+
+https://medium.com/@yia333/using-aws-cloudformation-macros-and-custom-resources-with-the-serverless-framework-ab7bb121d13d
 
 ### File Structure
 
