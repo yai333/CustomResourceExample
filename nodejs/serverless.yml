@@ -32,7 +32,7 @@ functions:
     handler: handler.addDefaultPost
 
 resources:
-  # dynamodb
+  # cognito
   # - ${file(resources/cognito.yml)}
   # dynamodb
   - ${file(resources/dynamodb.yml)}
