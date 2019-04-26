@@ -24,7 +24,7 @@ provider:
 custom:
   poolName: samplePool
   postsTable: ${self:provider.stage}posts
-  systemUserEmail: aiyi.hack@gmail.com
+  systemUserEmail: admin.user@neami.app
   tableThroughput: 5
 
 functions:
